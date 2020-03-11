@@ -5,9 +5,45 @@
 
         svDocReady(function () {
 
+            var link = document.createElement("link");
+            link.href = '<%= leafletCssUrl %>';
+            link.type = "text/css";
+            link.rel = "stylesheet";
+            document.getElementsByTagName("head")[0].appendChild(link);
+
             setTimeout(function () {
 
-                var map = L.map('afLeafletMapID').setView([55.604961, 13.001714], <%= zoom %>);
+                var leafletMap = L.map('afLeafletMapID').setView([<%= lat %>, <%= lon %>], <%= zoom %>),
+                    tuileUrl = '<%= shellUrl %>',
+                    attrib = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+                    marker,
+                    osm;
+
+                osm = L.tileLayer(tuileUrl, {
+                    minZoom: 8,
+                    maxZoom: 20,
+                    attribution: attrib
+                });
+
+                osm.addTo(leafletMap);
+
+                marker = L.marker([<%= lat %>, <%= lon %>]).addTo(leafletMap);
+
+                <% if (useToolTip) { %>
+                    marker.bindPopup("<%= toolTip %>");
+                <% } %>
+
+                <% if (preventScrollZoom) { %>
+                    leafletMap.scrollWheelZoom.disable();
+                <% } %>
+
+                <% if (preventMoveMap) { %>
+                    leafletMap.dragging.disable();
+                <% } %>
+
+                <% if (preventDoubleClickZoom) { %>
+                    leafletMap.doubleClickZoom.disable();
+                <% } %>
 
             }, 100);
 

@@ -1,3 +1,21 @@
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css">
+
+<script>
+
+    var configLat = '<%= lat %>',
+        configLon = '<%= lon %>';
+
+    if (!configLat) {
+        configLat = '55.6056994420748';
+    }
+
+    if (!configLon) {
+        configLon = '13.007297515869142';
+    }
+
+</script>
+
 <div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title">Inställningar</h3>
@@ -16,4 +34,68 @@
             <input class="form-control" type="number" min="0" max="1000" name="height" value="300">
         </div>
     </div>
+
+    <div class="panel-body">
+        <div class="form-group">
+            <label>Skal</label>
+            <input class="form-control" type="text" name="shellURL"
+                value="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png" />
+            <span class="configMoreInfo">Default https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png. Mer skal kan
+                hittas på https://leaflet-extras.github.io/leaflet-providers/preview/</span>
+        </div>
+    </div>
+
+    <div class="panel-body">
+        <div class="form-group">
+            <label>Förhindra scrollzoom</label>
+            <input type="checkbox" name="preventScrollZoom" data-value-type="boolean">
+        </div>
+    </div>
+
+    <div class="panel-body">
+        <div class="form-group">
+            <label>Förhindra flytt av kartan</label>
+            <input type="checkbox" name="preventMoveMap" data-value-type="boolean">
+        </div>
+    </div>
+
+    <div class="panel-body">
+        <div class="form-group">
+            <label>Förhindra zoom vid dubbelklick</label>
+            <input type="checkbox" name="preventDoubleClickZoom" data-value-type="boolean">
+        </div>
+    </div>
+
+    <div class="panel-body">
+        <div class="form-group">
+            <label>Popup text</label>
+            <input class="form-control" type="input" name="toolTip" value="" />
+            <span class="configMoreInfo">HTML är tillåtet. Lämna tom ifall ingen popup ska visas</span>
+        </div>
+    </div>
+
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Kartpunkt</h3>
+    </div>
+
+    <div class="form-group">
+        <div style="height: 400px" id="afConfigLeafletMap">
+
+        </div>
+    </div>
+
+    <div class="panel-body">
+        <div class="form-group">
+            <label>Latitud</label>
+            <input class="form-control" type="text" name="lat" value="">
+        </div>
+        <div class="form-group">
+            <label>Longitud</label>
+            <input class="form-control" type="text" name="lon" value="">
+        </div>
+    </div>
+
 </div>

@@ -3,5 +3,8 @@ body {
 }
 
 .configMoreInfo {
+    font-size: 90%;
     font-style: italic;
+    margin-top: 6px;
+    display: block;
 }

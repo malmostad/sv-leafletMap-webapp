@@ -1,19 +1,4 @@
 <div class="af-leafletMap">
-
-    <script>
-
-        svDocReady(function () {
-
-            var script = document.createElement('script');
-
-            script.src = '<%= leafletScriptUrl %>';
-            document.head.appendChild(script);
-
-        });
-
-
-    </script>
-
     <script src="<%= leafletScriptUrl %>"></script>
     <%= renderer.renderComponent('LeafletMap') %>
 </div>
