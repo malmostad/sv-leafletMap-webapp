@@ -1,0 +1,18 @@
+body {
+    background-color: transparent;
+}
+
+#configGoogleMap,
+#configMapbox {
+    max-width: 100%;
+    max-height: 800px;
+    min-height: 300px;
+}
+
+.hiddenInfo {
+    display: none;
+}
+
+.required {
+    color: red;
+}

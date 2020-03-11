@@ -1,0 +1,17 @@
+<div class="" style="height: <%= height %>px" id="afLeafletMapID">
+    LEAFLET AMPS
+
+    <script>
+
+        svDocReady(function () {
+
+            setTimeout(function () {
+
+                var map = L.map('afLeafletMapID').setView([55.604961, 13.001714], <%= zoom %>);
+
+            }, 100);
+
+        });
+
+    </script>
+</div>

@@ -1,0 +1,9 @@
+{
+    "id": "afLeafletMap",
+    "version": "0.0.1",
+    "name": "ÅF Leaflet Map",
+    "author": "ÅF Digital solutions",
+    "description": "A map module",
+    "helpUrl": "https://webbteam.se/leaflet-map",
+    "type": "WebApp"
+}

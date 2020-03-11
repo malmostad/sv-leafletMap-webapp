@@ -1,0 +1,17 @@
+{
+    "mapService": "Map service",
+    "zoomLevel": "Zoom level",
+    "mapboxConfigService": "Mapbox",
+    "mapboxConfigURL": "URL Mapbox",
+    "googleConfigService": "Google maps",
+    "googleConfigAPIKey": "Google API key",
+    "googleConfigURL": "URL Google maps",
+    "configMapPoint": "Place marker",
+    "tooltip": "Info window",
+    "disableDragging": "Disable dragging on map",
+    "disableDraggingText": "If this checkbox is checked you could not move the map",
+    "disableZoom": "Prevent zoom via scroll",
+    "disableZoomText": "If this checkbox is checked you could not zoom the map",
+    "mapHeight": "Map height (px)",
+    "mapSettings": "Map settings"
+}

@@ -1,0 +1,17 @@
+{
+    "mapService": "Karttjänst",
+    "zoomLevel": "Zoom nivå",
+    "mapboxConfigService": "Mapbox",
+    "mapboxConfigURL": "URL till Mapbox",
+    "googleConfigService": "Google maps",
+    "googleConfigAPIKey": "Google API nyckel",
+    "googleConfigURL": "URL till Google maps",
+    "configMapPoint": "Kartpunkt",
+    "tooltip": "Kartinformation",
+    "disableDragging": "Förhindra flytt av karta",
+    "disableDraggingText": "Genom att bocka i denna ruta kan man ej flytta kartan",
+    "disableZoom": "Förhindra zoom vid scroll",
+    "disableZoomText": "Genom att bocka i denna ruta kan man ej zooma kartan",
+    "mapHeight": "Höjd på kartan (px)",
+    "mapSettings": "Kartinställningar"
+}
