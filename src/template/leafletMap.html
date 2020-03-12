@@ -1,6 +1,4 @@
 <div class="" style="height: <%= height %>px" id="afLeafletMapID">
-    LEAFLET AMPS
-
     <script>
 
         svDocReady(function () {
@@ -44,6 +42,10 @@
                 <% if (preventDoubleClickZoom) { %>
                     leafletMap.doubleClickZoom.disable();
                 <% } %>
+
+                    jQuery('#afLeafletMapID').on('tabnav.change', function () {
+                        leafletMap._onResize();
+                    });
 
             }, 100);
 
